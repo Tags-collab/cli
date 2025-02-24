@@ -1294,6 +1294,16 @@ const definitions = {
     `,
     flatten,
   }),
+  'node-gyp': new Definition('node-gyp', {
+    default: require.resolve('node-gyp/bin/node-gyp.js'),
+    type: path,
+    description: `
+      This is the location of the "node-gyp" bin.  By default it uses one that ships with npm itself.
+
+      You can use this config to specify your own "node-gyp" to run.
+    `,
+    flatten,
+  }),
   'node-options': new Definition('node-options', {
     default: null,
     type: [null, String],
